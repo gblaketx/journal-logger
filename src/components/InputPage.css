@@ -1,0 +1,46 @@
+
+.input-page {
+    margin: 10px;
+}
+
+.app-header {
+  background-color: #337ab7;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.input-page .intro-text {
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.input-page .tall {
+    min-height: 400px;
+}
+
+.input-page .tall-panel {
+    min-height: 486px;
+}
+
+.input-page .header-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-page .subheader-text {
+    font-weight: bold;
+}
+
+.input-page .advance-button {
+    float: right;
+    margin-right: 20px;
+}
+
+.input-page .vertical-margin {
+    margin-top: 10px;
+}
+
+.input-page .larger-font {
+    font-size: 16px;
+}

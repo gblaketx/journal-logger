@@ -1,0 +1,30 @@
+{
+  "name": "journal-logger",
+  "version": "0.1.0",
+  "description": "A utility for creating DayOne JSON-formatted entries with custom parameters.",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "moment": "^2.22.2",
+    "react": "^16.4.1",
+    "react-datepicker": "^1.5.0",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gblaketx/journal-logger.git"
+  },
+  "author": "gblaketx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gblaketx/journal-logger/issues"
+  },
+  "homepage": "https://github.com/gblaketx/journal-logger#readme"
+}
