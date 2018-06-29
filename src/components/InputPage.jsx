@@ -3,6 +3,8 @@ import InputParams from './InputParams';
 import './InputPage.css'
 import moment from 'moment'
 
+import {createJSON} from './JSONUtils';
+
 class InputPage extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +13,7 @@ class InputPage extends Component {
       /** The date for the journal entry */
       date: moment(),
 
+      /** The location of the entry */
       location: {
         shortName: "Tallahassee - Ocala",
         placeName: "1549 Ocala Road",
@@ -20,10 +23,16 @@ class InputPage extends Component {
 
       /** The journal entry text */
       text: "",
+
+      /** An optional picture file */
+      picture: "",
     }
 
     this.updateText = this.updateText.bind(this);
     this.updateLocation = this.updateLocation.bind(this);
+    this.updatePicture = this.updatePicture.bind(this);
+    this.updateDate = this.updateDate.bind(this);
+    this.nextEntry = this.nextEntry.bind(this);
   }
 
   /** Updates the text when it's changed */
@@ -32,14 +41,30 @@ class InputPage extends Component {
   }
 
   updateLocation(newLocation) {
-    // const newLocation = {
-    //   shortName: shortName,
-    //   placeName: address,
-    //   localityName: city,
-    //   administrativeArea: state
-    // }
-
     this.setState({location: newLocation});
+  }
+
+  updatePicture(event) {
+    const myURL = window.URL || window.webkitURL;
+    this.setState({picture: myURL.createObjectURL(event.target.files[0])})
+  }
+
+  updateDate(date) {
+    this.setState({date: date})
+  }
+
+  nextEntry(event) {
+    // TODO: Run some sort of validation here, maybe in createJSON?
+
+    createJSON(this.state);
+
+    this.setState({
+      date: this.state.date.add(1, 'days'),
+      text: "",
+      picture: "",
+    });
+
+    // Some sort of confirmation popup here would be nice?
   }
 
 
@@ -60,8 +85,11 @@ class InputPage extends Component {
             <InputParams
               initialDate={this.state.date}
               initialLocation={this.state.location}
+              initialPicture={this.state.picture}
 
               onLocationChange={this.updateLocation}
+              onPictureChange={this.updatePicture}
+              onDateChange={this.updateDate}
             />
 
             <div className="col-md-9">
@@ -79,7 +107,10 @@ class InputPage extends Component {
           </div>
 
           <div>
-            <button className="btn btn-lg btn-primary advance-button">
+            <button 
+              className="btn btn-lg btn-primary advance-button"
+              onClick={this.nextEntry}
+            >
               Next Day
             </button>
           </div>
@@ -88,6 +119,5 @@ class InputPage extends Component {
     );
   }
 }
-
 
 export default InputPage;

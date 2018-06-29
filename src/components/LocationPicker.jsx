@@ -7,30 +7,65 @@ class LocationPicker extends Component {
     this.locations = new Map([
       ['MTC', 
         {
-          "placeName": "MTC Street",
+          "placeName": "2005 North 900 East",
           "localityName": "Provo",
-          "administrativeArea": "Utah"
+          "administrativeArea": "UT"
         }
       ],
       ['Quincy',
         {
-          "placeName": "MTC Street",
+          "placeName": "105 North 9th Street #4",
           "localityName": "Quincy",
-          "administrativeArea": "Florida"
+          "administrativeArea": "FL"
         }
       ],
       ['Tallahassee - Ocala',
         {
-          "placeName": "MTC Street",
+          "placeName": "1360 Ocala Road #231",
           "localityName": "Tallahassee",
-          "administrativeArea": "Florida"
+          "administrativeArea": "FL"
+        }
+      ],
+      ['Tallahassee - Charlotte',
+        {
+          "placeName": "1330 Charlotte Street",
+          "localityName": "Tallahassee",
+          "administrativeArea": "FL"
+        }
+      ],
+      ['Tallahassee - Victory Garden',
+        {
+          "placeName": "410 Victory Garden Drive #189",
+          "localityName": "Tallahassee",
+          "administrativeArea": "FL"
+        }
+      ],
+      ['Pascagoula - Scovel',
+        {
+          "placeName": "4004 Scovel Avenue #24",
+          "localityName": "Pascagoula",
+          "administrativeArea": "MS"
+        }
+      ],
+      ['Pascagoula - Eden',
+        {
+          "placeName": "2816 Eden Street #515",
+          "localityName": "Pascagoula",
+          "administrativeArea": "MS"
+        }
+      ],
+      ['Mobile',
+        {
+          "placeName": "5089 Government Boulevard #102",
+          "localityName": "Mobile",
+          "administrativeArea": "AL"
         }
       ],
       ['Other - Specify', null]
     ]);
 
     this.locationOptions = Array.from(this.locations.keys()).map( (shortName) =>
-      <option>{shortName}</option>
+      <option key={shortName}>{shortName}</option>
     );
 
     this.handleLocationChange = this.handleLocationChange.bind(this);
