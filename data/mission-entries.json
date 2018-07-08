@@ -1,0 +1,84 @@
+{
+"metadata" : {
+  "version" : "1.0"
+},
+"entries" : [
+    {
+      "starred" : false,
+      "location" : {
+        "region" : {
+          "center" : {
+            "longitude" : -117.2707066,
+            "latitude" : 32.984760999999999
+          },
+          "radius" : 73.702573673532015
+        },
+        "localityName" : "Solana Beach",
+        "country" : "United States",
+        "longitude" : -117.27059173583984,
+        "administrativeArea" : "CA",
+        "placeName" : "535 S Highway 101",
+        "latitude" : 32.984580993652344
+      },
+      "creationDate" : "2015-06-13T19:00:00Z",
+      "userActivity" : {
+        "activityName" : "Stationary",
+        "stepCount" : 2298
+      },
+      "text" : "A busy day today. I'm actually writing this tomorrow, on Sunday because I was too tired last night. I also just downloaded this app this morning. I hope I can use it to journal nightly. Maybe I can also have it ask me if I prayed and what I learned in scripture study. I'll figure that out later though. Anyway, today was quite busy, as I had to finish packing for Solana Beach, unpack my missionary stuff, try to forward my emails, and the fly to San Diego. But who said post-mission life would be a vacation? At least I'm chipping away at my to-do list from 14 to 7 items. This whole Comcast email thing not working is quite a hassle. However, I have forwarded some of my mission emails and I finished a draft of my talk on the plane. Now I just have to write my other talk, get my thoughts together for the Blake family testimony meeting, prepare my third hour lesson for the 28th, and eventually have something cogent to say when I report to the high council on the 16th. So, there will be much pontification by me in the coming days. Anyway, each night I want to report on what I learned in scripture study, so today I was impressed that my personal righteousness can reduce the power of Satan both personally and in the whole world. This contrasts with the results when we follow the natural man and Satan binds us. So, that's the day in a nutshell. Breakfast time.",
+      "weather" : {
+        "sunsetDate" : "2015-06-14T02:59:09Z",
+        "temperatureCelsius" : 18,
+        "weatherServiceName" : "HAMweather",
+        "windBearing" : 230,
+        "sunriseDate" : "2015-06-13T12:39:35Z",
+        "conditionsDescription" : "Cloudy",
+        "pressureMB" : 1010,
+        "visibilityKM" : 16.093439102172852,
+        "relativeHumidity" : 78,
+        "windSpeedKPH" : 11,
+        "weatherCode" : "cloudy",
+        "windChillCelsius" : 18
+      },
+      "timeZone" : "America\/Los_Angeles",
+      "uuid" : "38E39CC254424F1598D49B1F3B3985EB",
+      "tags" : [
+        "Daily",
+        "San Diego"
+      ],
+      "duration" : 0,
+      "photos" : [
+        {
+          "cameraMake" : "Apple",
+          "fnumber" : "2.2",
+          "orderInEntry" : 0,
+          "width" : 2100,
+          "cameraModel" : "iPhone 6",
+          "type" : "jpeg",
+          "identifier" : "194EE920A72C4A8DA0C36A1AF0315774",
+          "date" : "2015-06-21T14:36:25Z",
+          "location" : {
+            "region" : {
+              "center" : {
+                "longitude" : -83.827903747558608,
+                "latitude" : 42.280570977455
+              },
+              "identifier" : "<+42.28057098,-83.82790375> radius 141.69",
+              "radius" : 141.68776905187667
+            },
+            "localityName" : "Scio",
+            "country" : "Estados Unidos",
+            "timeZoneName" : "America\/Detroit",
+            "administrativeArea" : "MI",
+            "longitude" : -83.827903747558594,
+            "placeName" : "5004 Birkdale Dr",
+            "latitude" : 42.280570983886719
+          },
+          "height" : 1575,
+          "md5" : "6e5ff81a786b32b955e759c9d20552cc",
+          "focalLength" : "4.15"
+        }
+      ]
+    }
+
+]}

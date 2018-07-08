@@ -1,70 +1,13 @@
 import React, { Component } from 'react';
 
+const CONSTANTS = require('../constants');
+// import CONSTANTS from '../constants';
+
 class LocationPicker extends Component {
   constructor(props) {
     super(props);
 
-    this.locations = new Map([
-      ['MTC', 
-        {
-          "placeName": "2005 North 900 East",
-          "localityName": "Provo",
-          "administrativeArea": "UT"
-        }
-      ],
-      ['Quincy',
-        {
-          "placeName": "105 North 9th Street #4",
-          "localityName": "Quincy",
-          "administrativeArea": "FL"
-        }
-      ],
-      ['Tallahassee - Ocala',
-        {
-          "placeName": "1360 Ocala Road #231",
-          "localityName": "Tallahassee",
-          "administrativeArea": "FL"
-        }
-      ],
-      ['Tallahassee - Charlotte',
-        {
-          "placeName": "1330 Charlotte Street",
-          "localityName": "Tallahassee",
-          "administrativeArea": "FL"
-        }
-      ],
-      ['Tallahassee - Victory Garden',
-        {
-          "placeName": "410 Victory Garden Drive #189",
-          "localityName": "Tallahassee",
-          "administrativeArea": "FL"
-        }
-      ],
-      ['Pascagoula - Scovel',
-        {
-          "placeName": "4004 Scovel Avenue #24",
-          "localityName": "Pascagoula",
-          "administrativeArea": "MS"
-        }
-      ],
-      ['Pascagoula - Eden',
-        {
-          "placeName": "2816 Eden Street #515",
-          "localityName": "Pascagoula",
-          "administrativeArea": "MS"
-        }
-      ],
-      ['Mobile',
-        {
-          "placeName": "5089 Government Boulevard #102",
-          "localityName": "Mobile",
-          "administrativeArea": "AL"
-        }
-      ],
-      ['Other - Specify', null]
-    ]);
-
-    this.locationOptions = Array.from(this.locations.keys()).map( (shortName) =>
+    this.locationOptions = Array.from(CONSTANTS.locations.keys()).map( (shortName) =>
       <option key={shortName}>{shortName}</option>
     );
 
@@ -74,7 +17,7 @@ class LocationPicker extends Component {
   }
 
   getLocation(shortName) {
-    const location = this.locations.get(shortName)
+    const location = CONSTANTS.locations.get(shortName)
     if(!location) {
       return {
         shortName: shortName,
@@ -102,6 +45,10 @@ class LocationPicker extends Component {
     return this.props.location.shortName !== 'Other - Specify';
   }
 
+  getClassName(isValid) {
+    return "form-control larger-font" + (isValid ? " error" : "");
+  }
+
   render() {
     return (
       <div>
@@ -119,7 +66,7 @@ class LocationPicker extends Component {
           <div className="vertical-margin">
             Street Address
             <input 
-              className="form-control larger-font" 
+              className={this.getClassName(this.props.errors.placeName)}
               name="placeName"
               value={this.props.location.placeName}
               readOnly={this.isReadOnly()}
@@ -129,7 +76,7 @@ class LocationPicker extends Component {
           <div className="vertical-margin">
             City
             <input 
-              className="form-control larger-font" 
+              className={this.getClassName(this.props.errors.localityName)} 
               name="localityName"
               value={this.props.location.localityName} 
               readOnly={this.isReadOnly()}
@@ -139,7 +86,7 @@ class LocationPicker extends Component {
           <div className="vertical-margin">
             State
             <input 
-              className="form-control larger-font"
+              className={this.getClassName(this.props.errors.administrativeArea)}
               name="administrativeArea"
               value={this.props.location.administrativeArea} 
               readOnly={this.isReadOnly()}

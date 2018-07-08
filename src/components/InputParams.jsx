@@ -21,8 +21,9 @@ function InputParams(props) {
             onChange={props.onDateChange}
           />
           <LocationPicker 
-            location = {props.initialLocation}
-            onChange = {props.onLocationChange}
+            location={props.initialLocation}
+            onChange={props.onLocationChange}
+            errors={props.errors}
           />
 
           <PhotoUpload 

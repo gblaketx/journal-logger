@@ -8,11 +8,28 @@
   height: 150px;
   padding: 20px;
   color: white;
+  text-align: left;
+  width: 100%;
+}
+
+.inline-left {
+  position: fixed;
+}
+
+.inline-right {
+  margin-top: 30px;
+  width: 200px;
+  float: right;
+  text-align: center;
 }
 
 .input-page .intro-text {
     font-size: large;
     margin-bottom: 10px;
+}
+
+.input-page .centered-text {
+  text-align: center;
 }
 
 .input-page .tall {
@@ -49,6 +66,34 @@
   margin-left: 20px;
   width: 50px;
   height: 50px;
+}
+
+.input-page .error {
+  border: 1px solid red;
+}
+
+.input-page .modal-confirm-backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
+  padding: 50px;
+  z-index: 1;
+}
+
+.input-page .modal-confirm-body {
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 500px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.input-page .modal-body-wide {
+  max-width: 800px;
 }
 
 .react-datepicker {
